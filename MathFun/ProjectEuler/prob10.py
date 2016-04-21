@@ -24,17 +24,17 @@ checkLength = sqrt(2000000)
 
 sieve = []
 for i in range(0,sieveLength):
-	sieve.append(True)
+    sieve.append(True)
 
 for i in range(1,int(checkLength)/2+1):
-	if sieve[i]:
-		for j in range(2*i*i + 2*i,sieveLength, 2*i+1):
-			if sieve[j]:
-				sieve[j] = False
+    if sieve[i]:
+        for j in range(2*i*i + 2*i,sieveLength, 2*i+1):
+            if sieve[j]:
+                sieve[j] = False
 
 # hopefully the sieve has correctly identified the primes and now we just have to add them
 for i in range(0,sieveLength):
-	if sieve[i]:
-		sum = sum + 2*i + 1
+    if sieve[i]:
+        sum = sum + 2*i + 1
 
 print "Answer", sum

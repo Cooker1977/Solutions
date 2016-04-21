@@ -33,12 +33,12 @@ from math import ceil
 Target = 100
 
 def ConstructStorage():
-	b = []
-	for i in range (0,Target):
-		b.append([])
-		for j in range(0,Target):
-			b[i].append(float(0.0))
-	return b
+    b = []
+    for i in range (0,Target):
+        b.append([])
+        for j in range(0,Target):
+            b[i].append(float(0.0))
+    return b
 
 P = ConstructStorage()
 Strat = ConstructStorage()
@@ -46,32 +46,30 @@ Strat = ConstructStorage()
 # start my outer loop
 
 for i in range(Target - 1, -1, -1):
-	for j in range(Target - 1, -1, -1):
-		Tmax = int(ceil(log(float(Target - j),2))) + 1
-		maxProb = 0.0
-		for T in range(1,Tmax + 1):
-			if (i+1 == Target) and (j + pow(2, T-1) >= Target):
-				prob = 2.0 / (pow(2.0,T) + 1.0)
-			elif (j + pow(2, T-1) >= Target):
-                                prob = ((pow(2.0,T) - 1.0) * P[i+1][j] + 2.0) / (pow(2.0,T) + 1.0)
-                                if P[i+1][j] == 0:
-                                        print "Warning 1"
-			elif (i+1 == Target):
-				prob = P[i][j+pow(2,T-1)] / (pow(2.0,T) + 1.0)
-				if P[i][j+pow(2,T-1)] == 0:
-					print "Warning 2"
-			else:
-				prob = ((pow(2.0,T) - 1.0) * P[i+1][j] + P[i+1][j+pow(2,T-1)] + P[i][j+pow(2,T-1)]) / (pow(2.0,T) + 1.0)
-				if P[i+1][j] == 0 or P[i][j+pow(2,T-1)] == 0 or P[i+1][j+pow(2,T-1)] == 0:
-                                        print "Warning 3"
+    for j in range(Target - 1, -1, -1):
+        Tmax = int(ceil(log(float(Target - j),2))) + 1
+        maxProb = 0.0
+        for T in range(1,Tmax + 1):
+            if (i+1 == Target) and (j + pow(2, T-1) >= Target):
+                prob = 2.0 / (pow(2.0,T) + 1.0)
+            elif (j + pow(2, T-1) >= Target):
+                prob = ((pow(2.0,T) - 1.0) * P[i+1][j] + 2.0) / (pow(2.0,T) + 1.0)
+                if P[i+1][j] == 0:
+                    print "Warning 1"
+            elif (i+1 == Target):
+                prob = P[i][j+pow(2,T-1)] / (pow(2.0,T) + 1.0)
+                if P[i][j+pow(2,T-1)] == 0:
+                    print "Warning 2"
+            else:
+                prob = ((pow(2.0,T) - 1.0) * P[i+1][j] + P[i+1][j+pow(2,T-1)] + P[i][j+pow(2,T-1)]) / (pow(2.0,T) + 1.0)
+                if P[i+1][j] == 0 or P[i][j+pow(2,T-1)] == 0 or P[i+1][j+pow(2,T-1)] == 0:
+                    print "Warning 3"
+            
+            if prob > maxProb:
+                maxProb = prob
+                Strat[i][j] = T
 
-			if prob > maxProb:
-				maxProb = prob
-				Strat[i][j] = T
-
-		P[i][j] = maxProb
-		print i, j, P[i][j], Strat[i][j]
-
+        P[i][j] = maxProb
+        print i, j, P[i][j], Strat[i][j]
 
 print 0.5*P[0][0]+0.5*P[1][0]
-

@@ -6,11 +6,11 @@
 found = False
 
 for a in range(1,333):
-	for b in range(a+1,int((1000-a)/2)):
-		if a*a + b*b == (1000 - a - b) * (1000 - a - b):
-			print "Solution", a*b*(1000 - a - b)
-			found = True
-		if found:
-			break
-	if found:
-		break
+    for b in range(a+1,int((1000-a)/2)):
+        if a*a + b*b == (1000 - a - b) * (1000 - a - b):
+            print "Solution", a*b*(1000 - a - b)
+            found = True
+        if found:
+            break
+    if found:
+        break

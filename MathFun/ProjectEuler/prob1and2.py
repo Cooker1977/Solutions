@@ -29,21 +29,21 @@ import math
 # function to find the ith even Fibonacci number
 
 def EvenFibonacci(i):
-	n = int(3*i + 3)
-	golden = (1 + math.sqrt(5)) / 2.0
-	return round((math.pow(golden,n) - math.pow(-1/golden,n)) / math.sqrt(5))
+    n = int(3*i + 3)
+    golden = (1 + math.sqrt(5)) / 2.0
+    return round((math.pow(golden,n) - math.pow(-1/golden,n)) / math.sqrt(5))
 
 sum = 0.0
 j = 0
 below = True
 
 while below:
-	temp = EvenFibonacci(j)
-	if temp <= 4000000:
-		sum = sum + temp
-	else:
-		below = False
-	j = j+1
+    temp = EvenFibonacci(j)
+    if temp <= 4000000:
+        sum = sum + temp
+    else:
+        below = False
+    j = j+1
 
 print sum
 raw_input

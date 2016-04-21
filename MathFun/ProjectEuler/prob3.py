@@ -20,32 +20,32 @@ from math import sqrt
 # check odds.
 
 def FindNext(primeList):
-	divisionFound = True
-	trying = primeList[len(primeList) - 1] + 2
-	while divisionFound:
-		divisionFound = False
-		i = 0
-
-		# here I only check the primes needed for dividing trying.
-		
-		while primeList[i] <= sqrt(trying) and i < len(primeList):
-			if trying % primeList[i] == 0:
-				divisionFound = True
-			i = i + 1
-		if divisionFound:
-			trying = trying + 2
-	return trying
+    divisionFound = True
+    trying = primeList[len(primeList) - 1] + 2
+    while divisionFound:
+        divisionFound = False
+        i = 0
+        
+        # here I only check the primes needed for dividing trying.
+        
+        while primeList[i] <= sqrt(trying) and i < len(primeList):
+            if trying % primeList[i] == 0:
+                divisionFound = True
+            i = i + 1
+        if divisionFound:
+            trying = trying + 2
+    return trying
 
 # this routine divides out all powers of a given factor until it will no longer
 # divide the number.  Then returns the result.
 
 def RemoveFactor(composite, factor):
-	factorized = composite
-	if factor == 1:
-		return composite
-	while factorized % factor == 0:
-		factorized = factorized / factor
-	return factorized
+    factorized = composite
+    if factor == 1:
+        return composite
+    while factorized % factor == 0:
+        factorized = factorized / factor
+    return factorized
 
 bigNum = 600851475143
 remainingFactors = bigNum
@@ -56,16 +56,16 @@ biggest = 1
 # don't divide bigNum, but I am trying to keep the code general
 
 if bigNum % 2 == 0:
-	biggest = 2
-	remainingFactors = RemoveFactor(remainingFactors,2)
+    biggest = 2
+    remainingFactors = RemoveFactor(remainingFactors,2)
 if remainingFactors % 3 == 0:
-	biggest = 3
-	remainingFactors = RemoveFactor(remainingFactors,3)
+    biggest = 3
+    remainingFactors = RemoveFactor(remainingFactors,3)
 
 while primes[len(primes) - 1] < sqrt(bigNum) and remainingFactors > 1:
-	primes.append(FindNext(primes))
-	if remainingFactors % primes[len(primes) - 1] == 0:
-		biggest = primes[len(primes) - 1]
-		remainingFactors = RemoveFactor(remainingFactors,primes[len(primes) - 1])
+    primes.append(FindNext(primes))
+    if remainingFactors % primes[len(primes) - 1] == 0:
+        biggest = primes[len(primes) - 1]
+        remainingFactors = RemoveFactor(remainingFactors,primes[len(primes) - 1])
 
 print "Answer", max(biggest,remainingFactors)

@@ -26,7 +26,6 @@ class Sieve:
             if isPrime[i]:
                 self.PrimeList.append(2*i + 3)
 
-
 def main():
     BigNum = 1000000
     y = Sieve(BigNum)
