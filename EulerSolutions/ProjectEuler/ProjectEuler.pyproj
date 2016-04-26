@@ -40,7 +40,6 @@
     <Compile Include="prob7.py" />
     <Compile Include="prob8.py" />
     <Compile Include="prob9.py" />
-    <Compile Include="stressThread.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
