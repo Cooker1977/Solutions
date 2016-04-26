@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{89D2B892-A571-4507-83F8-F2ABB7CAAA89}"
 EndProject
@@ -13,11 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoboardShapes", "GeoboardS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoboardShapes.Tests", "GeoboardShapes.Tests\GeoboardShapes.Tests.csproj", "{D117E35F-B58A-4E6F-8184-B8146B5FB85D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods.Tests", "..\Shared\NumericalMethods.Tests\NumericalMethods.Tests.csproj", "{4C73056D-5451-4EA8-A891-9F866E5A292A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods", "..\Shared\NumericalMethods\NumericalMethods.csproj", "{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}"
-EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ProjectEuler", "ProjectEuler\ProjectEuler.pyproj", "{7DEC9A91-BA76-4467-AB2E-BE5EF0CFD8E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods", "NumericalMethods\NumericalMethods.csproj", "{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods.Tests", "NumericalMethods.Tests\NumericalMethods.Tests.csproj", "{4C73056D-5451-4EA8-A891-9F866E5A292A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,16 +41,16 @@ Global
 		{D117E35F-B58A-4E6F-8184-B8146B5FB85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D117E35F-B58A-4E6F-8184-B8146B5FB85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D117E35F-B58A-4E6F-8184-B8146B5FB85D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DEC9A91-BA76-4467-AB2E-BE5EF0CFD8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DEC9A91-BA76-4467-AB2E-BE5EF0CFD8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DEC9A91-BA76-4467-AB2E-BE5EF0CFD8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DEC9A91-BA76-4467-AB2E-BE5EF0CFD8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
