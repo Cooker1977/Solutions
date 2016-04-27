@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7dec9a91-ba76-4467-ab2e-be5ef0cfd8e9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PowerSieve.py</StartupFile>
+    <StartupFile>prob50.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,7 +24,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PowerSieve.py" />
     <Compile Include="prob10.py" />
     <Compile Include="prob11.py" />
     <Compile Include="prob12.py" />

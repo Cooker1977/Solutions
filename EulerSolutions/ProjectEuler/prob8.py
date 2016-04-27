@@ -4,7 +4,7 @@ bigString = bigNum.read()
 currentProd = 1
 digitsList = []
 maxProd = -10000
-window = 5
+window = 13
 
 for i in range(0, len(bigString)):
     if bigString[i] != '\n':
