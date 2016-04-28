@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Math = System.Math;
 
 namespace GeoboardShapes
 {
@@ -19,18 +18,18 @@ namespace GeoboardShapes
     // ordering.
     class ShrinkingBoard
     {
-        private readonly List<Vertex> _vertices;
+        private readonly List<Geometry.Point> _vertices;
         private int _holeCount;
         private readonly int _geoboardOrder;
 
         public ShrinkingBoard(int geoboardOrder)
         {
             _geoboardOrder = geoboardOrder;
-            var lowerLeft = new Vertex(0, 0);
-            var lowerRight = new Vertex(_geoboardOrder, 0);
-            var upperRight = new Vertex(_geoboardOrder, _geoboardOrder);
-            var upperLeft = new Vertex(0, _geoboardOrder);
-            _vertices = new List<Vertex>
+            var lowerLeft = new Geometry.Point(0, 0);
+            var lowerRight = new Geometry.Point(_geoboardOrder, 0);
+            var upperRight = new Geometry.Point(_geoboardOrder, _geoboardOrder);
+            var upperLeft = new Geometry.Point(0, _geoboardOrder);
+            _vertices = new List<Geometry.Point>
                         {
                             lowerLeft,
                             lowerRight,
@@ -39,7 +38,7 @@ namespace GeoboardShapes
                         };
         }
 
-        public void RemoveVertex(Vertex vertex)
+        public void RemoveVertex(Geometry.Point vertex)
         {
             int indexToRemove;
             for (indexToRemove = 0; indexToRemove < _vertices.Count; ++indexToRemove)
@@ -75,50 +74,16 @@ namespace GeoboardShapes
 
             var vertexToRemove = _vertices[indexToRemove];
             var otherVertex = _vertices[indexToRemove == 0 ? 1 : 0];
-            var totalRise = vertexToRemove.YPosition - otherVertex.XPosition;
-            var totalRun = vertexToRemove.XPosition - otherVertex.XPosition;
+            var totalRise = vertexToRemove.Y - otherVertex.X;
+            var totalRun = vertexToRemove.X - otherVertex.X;
             var gcd = NumericalMethods.Math.Gcd(totalRise, totalRun);
             var rise = totalRise/gcd;
             var run = totalRun/gcd;
 
-            var trialAdditionalVertex = new Vertex(vertexToRemove.XPosition + run, vertexToRemove.YPosition + rise);
+            var trialAdditionalVertex = new Geometry.Point(vertexToRemove.X + run, vertexToRemove.Y + rise);
             _vertices.RemoveAt(indexToRemove);
             if(!trialAdditionalVertex.Equals(otherVertex))
                 _vertices.Insert(indexToRemove, trialAdditionalVertex);
-        }
-
-        public double Area()
-        {
-            return Area(0);
-        }
-
-        // recursively finds the area by finding the triangle defined by the last vertex, the
-        // vertex at currentIndex and the vertex at currentIndex + 1 and proceeding down the 
-        // vertices computing all those areas and then summing.
-        private double Area(int currentIndex)
-        {
-            if (currentIndex + 1 >= _vertices.Count - 1)
-                return 0.0;
-
-            var twiceArea = TwiceTriangleArea(_vertices[currentIndex],
-                                              _vertices[currentIndex + 1],
-                                              _vertices[_vertices.Count - 1]);
-            // if all 3 vertices lie on a straight line, something has gone wrong, and twice the area will be 0 
-            if (twiceArea == 0)
-                throw new Exception("Invalid shape generated!!");
-            // use recursion to keep on trucking.
-            return Math.Abs(twiceArea)/2.0 + Area(currentIndex + 1);
-        }
-
-        // It is a curious fact that twice the area of a triangle whose vertices are all at integer
-        // x-y coordinates is also an integer. I will make use of this fact to avoid
-        // double rounding errors and the like.
-        private static int TwiceTriangleArea(Vertex point1, Vertex point2, Vertex point3)
-        {
-            var twiceArea = (point2.YPosition - point3.YPosition)*point1.XPosition +
-                            (point3.YPosition - point1.YPosition)*point2.XPosition +
-                            (point1.YPosition - point2.YPosition)*point3.XPosition;
-            return Math.Sign(twiceArea)*twiceArea;
         }
 
         public double ShapeProbability()
@@ -131,45 +96,6 @@ namespace GeoboardShapes
             for (var i = 0; i < _holeCount; ++i)
                 holeProbability *= _geoboardOrder/(_geoboardOrder + 1.0);
             return holeProbability*vertexProbaility;
-        }
-    }
-
-    class Vertex : IEquatable<Vertex>
-    {
-        private readonly int _xPosition;
-        private readonly int _yPosition;
-
-        public Vertex(int xPosition, int yPosition)
-        {
-            _xPosition = xPosition;
-            _yPosition = yPosition;
-        }
-
-        public int XPosition => _xPosition;
-
-        public int YPosition => _yPosition;
-
-        public bool Equals(Vertex other)
-        {
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
-            return _xPosition == other._xPosition && _yPosition == other._yPosition;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != GetType()) return false;
-            return Equals((Vertex) obj);
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                return (_xPosition*397) ^ _yPosition;
-            }
         }
     }
 }

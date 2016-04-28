@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods", "Numeric
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods.Tests", "NumericalMethods.Tests\NumericalMethods.Tests.csproj", "{4C73056D-5451-4EA8-A891-9F866E5A292A}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerSolutions", "EulerSolutions\EulerSolutions.fsproj", "{A5032F3C-65FB-4147-9EA5-4E4230AC8B0A}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerSolutions.Tests", "EulerSolutions.Tests\EulerSolutions.Tests.fsproj", "{A29315E4-C633-42A0-B285-4D688C2FD615}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C73056D-5451-4EA8-A891-9F866E5A292A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5032F3C-65FB-4147-9EA5-4E4230AC8B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5032F3C-65FB-4147-9EA5-4E4230AC8B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5032F3C-65FB-4147-9EA5-4E4230AC8B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5032F3C-65FB-4147-9EA5-4E4230AC8B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29315E4-C633-42A0-B285-4D688C2FD615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29315E4-C633-42A0-B285-4D688C2FD615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29315E4-C633-42A0-B285-4D688C2FD615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29315E4-C633-42A0-B285-4D688C2FD615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +58,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D117E35F-B58A-4E6F-8184-B8146B5FB85D} = {89D2B892-A571-4507-83F8-F2ABB7CAAA89}
 		{4C73056D-5451-4EA8-A891-9F866E5A292A} = {89D2B892-A571-4507-83F8-F2ABB7CAAA89}
+		{A29315E4-C633-42A0-B285-4D688C2FD615} = {89D2B892-A571-4507-83F8-F2ABB7CAAA89}
 	EndGlobalSection
 EndGlobal
