@@ -5,7 +5,6 @@ open NUnit.Framework
 [<TestFixture>]
 type AreaTests =
     val tolerance : float
-
     new () = { tolerance = 1e-16 }
 
     [<TestCase(1)>]

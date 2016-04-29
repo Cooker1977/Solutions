@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="MathMethods.fs" />
     <Compile Include="Geometry.fs" />
     <Compile Include="Problem514.fs" />
   </ItemGroup>

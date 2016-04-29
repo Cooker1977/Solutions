@@ -19,16 +19,13 @@ namespace GeoboardShapes
     public class ShrinkingBoard
     {
         private readonly List<Geometry.Point> _vertices;
-        private int _holeCount;
-        private readonly int _geoboardOrder;
 
         public ShrinkingBoard(int geoboardOrder)
         {
-            _geoboardOrder = geoboardOrder;
             var lowerLeft = new Geometry.Point(0, 0);
-            var lowerRight = new Geometry.Point(_geoboardOrder, 0);
-            var upperRight = new Geometry.Point(_geoboardOrder, _geoboardOrder);
-            var upperLeft = new Geometry.Point(0, _geoboardOrder);
+            var lowerRight = new Geometry.Point(geoboardOrder, 0);
+            var upperRight = new Geometry.Point(geoboardOrder, geoboardOrder);
+            var upperLeft = new Geometry.Point(0, geoboardOrder);
             _vertices = new List<Geometry.Point>
                         {
                             lowerLeft,
@@ -49,7 +46,6 @@ namespace GeoboardShapes
             if (indexToRemove == _vertices.Count)
                 return;
 
-            ++_holeCount;
             if (_vertices.Count == 1)
             {
                 _vertices.RemoveAt(indexToRemove);
@@ -84,18 +80,6 @@ namespace GeoboardShapes
             _vertices.RemoveAt(indexToRemove);
             if(!trialAdditionalVertex.Equals(otherVertex))
                 _vertices.Insert(indexToRemove, trialAdditionalVertex);
-        }
-
-        public double ShapeProbability()
-        {
-            var vertexProbaility = 1.0;
-            for (var i = 0; i < _vertices.Count; ++i)
-                vertexProbaility *= 1.0/(_geoboardOrder + 1.0);
-
-            var holeProbability = 1.0;
-            for (var i = 0; i < _holeCount; ++i)
-                holeProbability *= _geoboardOrder/(_geoboardOrder + 1.0);
-            return holeProbability*vertexProbaility;
         }
     }
 }
