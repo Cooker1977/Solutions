@@ -26,4 +26,4 @@ type Problem514Tests =
     [<TestCase(8, 729, 2, 3, 3)>]
     member this.testShapeProbability expectedNumerator expectedDenominator geoboardOrder fixedHoleCount vertexCount = 
         let expectedValue = float expectedNumerator / float expectedDenominator
-        Assert.That(expectedValue, ((shapeProbability geoboardOrder fixedHoleCount vertexCount)|> Is.EqualTo).Within(this.tolerance))
+        Assert.That(expectedValue, Is.EqualTo(shapeProbability geoboardOrder fixedHoleCount vertexCount).Within(this.tolerance))

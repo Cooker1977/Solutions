@@ -42,5 +42,5 @@ type MathMethodsTests =
     [<TestCase(100.0, 10.0, 2)>]
     [<TestCase(121.0, 11.0, 2)>]
     [<TestCase(144.0, 12.0, 2)>]
-    member this.testIntegerPoint (expectedValue : float) (x : float) (y : int) = 
-        Assert.That(expectedValue, (x^y |> Is.EqualTo).Within(this.tolerance))
+    member this.testIntegerPoint (expectedValue : float) x  y = 
+        Assert.That(expectedValue, Is.EqualTo(x**y).Within(this.tolerance))

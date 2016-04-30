@@ -7,7 +7,7 @@ let shapeProbability geoboardOrder fixedHoleCount vertexCount =
     let pinProbability = 1.0/(geoboardOrder + 1 |> float)
     let holeProbability = (float geoboardOrder)/(geoboardOrder + 1 |> float)
 
-    (pinProbability^vertexCount)*(holeProbability^fixedHoleCount)
+    (pinProbability**vertexCount)*(holeProbability**fixedHoleCount)
 
 type ShrinkingBoard (geoboardOrder : int) =
     let vertices = [

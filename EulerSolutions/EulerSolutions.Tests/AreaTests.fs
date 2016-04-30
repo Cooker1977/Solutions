@@ -29,7 +29,7 @@ type AreaTests =
         ]
 
         let expectedArea = sideLength * sideLength |> float
-        Assert.That(vertices |> Area.polygonArea , (expectedArea |> Is.EqualTo).Within(this.tolerance))
+        Assert.That(Area.polygonArea(vertices), Is.EqualTo(expectedArea).Within(this.tolerance))
 
     [<TestCase(1, 1)>]
     [<TestCase(2, 2)>]
@@ -57,7 +57,7 @@ type AreaTests =
         ]
 
         let expectedArea = (length * height |> float) / 2.0
-        Assert.That(vertices |> Area.polygonArea , (expectedArea |> Is.EqualTo).Within(this.tolerance))
+        Assert.That(Area.polygonArea(vertices), Is.EqualTo(expectedArea).Within(this.tolerance))
 
     [<TestCase(1, 1)>]
     [<TestCase(2, 2)>]
@@ -85,7 +85,7 @@ type AreaTests =
         ]
 
         let expectedArea = (length * height |> float) / 2.0
-        Assert.That(vertices |> Area.polygonArea , (expectedArea |> Is.EqualTo).Within(this.tolerance))
+        Assert.That(Area.polygonArea(vertices), Is.EqualTo(expectedArea).Within(this.tolerance))
 
     [<TestCase(2, 3)>]
     [<TestCase(3, 4)>]
@@ -117,4 +117,4 @@ type AreaTests =
         ]
 
         let expectedArea = (height*width + (x2 - x1)*y1 |> float) / 2.0
-        Assert.That(vertices |> Area.polygonArea , (expectedArea |> Is.EqualTo).Within(this.tolerance))
+        Assert.That(Area.polygonArea(vertices), Is.EqualTo(expectedArea).Within(this.tolerance))

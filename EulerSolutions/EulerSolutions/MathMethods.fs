@@ -1,6 +1,6 @@
 ﻿module MathMethods
 
-let (^) x y = 
+let ( ** ) x y = 
     let rec loop acc counter =
         if counter > 1 then
             loop (acc * x) (counter - 1)
