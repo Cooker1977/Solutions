@@ -16,7 +16,7 @@ namespace GeoboardShapes
     // The TryRemoveVertex Method removes a specified vertex if present and locates the new vertices that would appear
     // on a full geoboard adding them to the _vertices list in the appropriate location to preserve the counter-clockwise
     // ordering.
-    class ShrinkingBoard
+    public class ShrinkingBoard
     {
         private readonly List<Geometry.Point> _vertices;
         private int _holeCount;

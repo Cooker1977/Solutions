@@ -1,23 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{89D2B892-A571-4507-83F8-F2ABB7CAAA89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoboardShapes", "GeoboardShapes\GeoboardShapes.csproj", "{67CFE9FB-2A1A-4139-BFA8-000937EB8EEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoboardShapes", "GeoboardShapes\GeoboardShapes.csproj", "{67CFE9FB-2A1A-4139-BFA8-000937EB8EEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoboardShapes.Tests", "GeoboardShapes.Tests\GeoboardShapes.Tests.csproj", "{D117E35F-B58A-4E6F-8184-B8146B5FB85D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoboardShapes.Tests", "GeoboardShapes.Tests\GeoboardShapes.Tests.csproj", "{D117E35F-B58A-4E6F-8184-B8146B5FB85D}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ProjectEuler", "ProjectEuler\ProjectEuler.pyproj", "{7DEC9A91-BA76-4467-AB2E-BE5EF0CFD8E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods", "NumericalMethods\NumericalMethods.csproj", "{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumericalMethods", "NumericalMethods\NumericalMethods.csproj", "{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalMethods.Tests", "NumericalMethods.Tests\NumericalMethods.Tests.csproj", "{4C73056D-5451-4EA8-A891-9F866E5A292A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumericalMethods.Tests", "NumericalMethods.Tests\NumericalMethods.Tests.csproj", "{4C73056D-5451-4EA8-A891-9F866E5A292A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerSolutions", "EulerSolutions\EulerSolutions.fsproj", "{A5032F3C-65FB-4147-9EA5-4E4230AC8B0A}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "EulerSolutions", "EulerSolutions\EulerSolutions.fsproj", "{A5032F3C-65FB-4147-9EA5-4E4230AC8B0A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerSolutions.Tests", "EulerSolutions.Tests\EulerSolutions.Tests.fsproj", "{A29315E4-C633-42A0-B285-4D688C2FD615}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "EulerSolutions.Tests", "EulerSolutions.Tests\EulerSolutions.Tests.fsproj", "{A29315E4-C633-42A0-B285-4D688C2FD615}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,5 +59,8 @@ Global
 		{D117E35F-B58A-4E6F-8184-B8146B5FB85D} = {89D2B892-A571-4507-83F8-F2ABB7CAAA89}
 		{4C73056D-5451-4EA8-A891-9F866E5A292A} = {89D2B892-A571-4507-83F8-F2ABB7CAAA89}
 		{A29315E4-C633-42A0-B285-4D688C2FD615} = {89D2B892-A571-4507-83F8-F2ABB7CAAA89}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C32C4B0-C1E6-41FC-B4ED-B79EFC1C60E0}
 	EndGlobalSection
 EndGlobal
