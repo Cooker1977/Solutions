@@ -1,12 +1,5 @@
 import math
 
-try:
-    import psyco
-    psyco.full()
-except ImportError:
-    pass
-
-
 class Sieve:
     PrimeList = [2]
     def __init__(self,x):
@@ -18,7 +11,7 @@ class Sieve:
             isPrime.append(True)
         for i in range(MAXINDEX):
             if isPrime[i]:
-                minIndex = ((2*i+3)*(2*i+3) -3)/2
+                minIndex = ((2*i+3)*(2*i+3) -3)//2
                 for j in range(minIndex,len(isPrime),(2*i+3)):
                     isPrime[j]=False
 
@@ -71,7 +64,7 @@ def main():
             found = y.PrimeList[0], y.PrimeList[count - 1],count,nextSums[-1]
         partialSums = nextSums[:]
 
-    print found
+    print(found)
     
 if __name__ == "__main__":
     main()

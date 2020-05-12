@@ -23,4 +23,4 @@ for i in range(0, len(bigString)):
     if currentProd > maxProd:
         maxProd = currentProd
     
-    print "Current Max is", maxProd
+    print("Current Max is", maxProd)

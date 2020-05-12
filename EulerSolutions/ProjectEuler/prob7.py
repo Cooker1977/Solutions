@@ -24,4 +24,4 @@ primes = [2,3]
 while len(primes) < 10001:
     primes.append(FindNext(primes))
 
-print "Answer", primes[len(primes) - 1]
+print("Answer", primes[len(primes) - 1])

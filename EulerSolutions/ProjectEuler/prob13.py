@@ -108,7 +108,7 @@ class StringPlay:
 
 def main():
      w = StringPlay()
-     print w.SumStrings()
+     print(w.SumStrings())
 
 if __name__ == "__main__":
     main()

@@ -55,21 +55,21 @@ for i in range(Target - 1, -1, -1):
             elif (j + pow(2, T-1) >= Target):
                 prob = ((pow(2.0,T) - 1.0) * P[i+1][j] + 2.0) / (pow(2.0,T) + 1.0)
                 if P[i+1][j] == 0:
-                    print "Warning 1"
+                    print("Warning 1")
             elif (i+1 == Target):
                 prob = P[i][j+pow(2,T-1)] / (pow(2.0,T) + 1.0)
                 if P[i][j+pow(2,T-1)] == 0:
-                    print "Warning 2"
+                    print("Warning 2")
             else:
                 prob = ((pow(2.0,T) - 1.0) * P[i+1][j] + P[i+1][j+pow(2,T-1)] + P[i][j+pow(2,T-1)]) / (pow(2.0,T) + 1.0)
                 if P[i+1][j] == 0 or P[i][j+pow(2,T-1)] == 0 or P[i+1][j+pow(2,T-1)] == 0:
-                    print "Warning 3"
+                    print("Warning 3")
             
             if prob > maxProb:
                 maxProb = prob
                 Strat[i][j] = T
 
         P[i][j] = maxProb
-        print i, j, P[i][j], Strat[i][j]
+        print(i, j, P[i][j], Strat[i][j])
 
-print 0.5*P[0][0]+0.5*P[1][0]
+print(0.5*P[0][0]+0.5*P[1][0])

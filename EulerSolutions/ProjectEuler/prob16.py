@@ -4,4 +4,4 @@ total = 0
 for i in digits:
     total += int(i)
 
-print total
+print(total)

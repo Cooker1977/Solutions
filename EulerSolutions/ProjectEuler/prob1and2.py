@@ -45,7 +45,6 @@ while below:
         below = False
     j = j+1
 
-print sum
-raw_input
+print(sum)
 
 # After running the code, I get the answer as 4613732 which is correct.

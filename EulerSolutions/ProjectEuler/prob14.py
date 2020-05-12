@@ -5,7 +5,7 @@ class SequenceLengths:
         self.lookUp = {1:1}
 
     def get_count(self,x):
-        if self.lookUp.has_key(x):
+        if x in self.lookUp:
             return self.lookUp[x]
         else:
             return None
@@ -36,4 +36,4 @@ for i in range(2,BigNum):
         maxLength = lengths.get_count(i)
         maxStart = i
 
-print maxLength, maxStart
+print(maxLength, maxStart)

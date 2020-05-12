@@ -27,13 +27,13 @@ while not found:
     for i in range(max(100,int(testNum/999)), int(sqrt(testNum))+1):
         if testNum % i == 0:
             found = True
-            print "Divsor", i
+            print("Divsor", i)
             break # stop if it gets here.
     
     # now I need to adjust the digits accordingly or print if found.
     
     if found:
-        print "Found", testNum
+        print("Found", testNum)
     else:
         if digit1 != 0:
             digit1 = digit1 - 1

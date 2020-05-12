@@ -43,6 +43,6 @@ factorList = FindFactors((i*(i+1))/2)
 while len(factorList) <= 500:
     i = i + 1
     factorList = FindFactors((i*(i+1))/2)
-    print "Trying", (i*(i+1)) / 2
+    print("Trying", (i*(i+1)) / 2)
 
-print "Answer", (i*(i+1)) / 2
+print("Answer", (i*(i+1)) / 2)

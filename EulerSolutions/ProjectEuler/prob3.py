@@ -68,4 +68,4 @@ while primes[len(primes) - 1] < sqrt(bigNum) and remainingFactors > 1:
         biggest = primes[len(primes) - 1]
         remainingFactors = RemoveFactor(remainingFactors,primes[len(primes) - 1])
 
-print "Answer", max(biggest,remainingFactors)
+print("Answer", max(biggest,remainingFactors))

@@ -16,7 +16,7 @@ sum = 2
 # Represent our list with a boolean
 
 
-sieveLength = (2000000 / 2) - 1
+sieveLength = (2000000 // 2) - 1
 checkLength = sqrt(2000000)
 
 # initialize the sieve
@@ -26,7 +26,7 @@ sieve = []
 for i in range(0,sieveLength):
     sieve.append(True)
 
-for i in range(1,int(checkLength)/2+1):
+for i in range(1,int(checkLength)//2+1):
     if sieve[i]:
         for j in range(2*i*i + 2*i,sieveLength, 2*i+1):
             if sieve[j]:
@@ -37,4 +37,4 @@ for i in range(0,sieveLength):
     if sieve[i]:
         sum = sum + 2*i + 1
 
-print "Answer", sum
+print("Answer", sum)
