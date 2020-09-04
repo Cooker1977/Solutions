@@ -8,7 +8,6 @@
     <Compile Include="AreaTests.fs" />
     <Compile Include="MathMethodsTests.fs" />
     <Compile Include="Problem514Tests.fs" />
-    <Content Include="packages.config" />
   </ItemGroup>
 
   <ItemGroup>

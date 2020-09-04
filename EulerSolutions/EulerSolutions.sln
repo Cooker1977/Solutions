@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{89D2B892
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoboardShapes", "GeoboardShapes\GeoboardShapes.csproj", "{67CFE9FB-2A1A-4139-BFA8-000937EB8EEB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoboardShapes.Tests", "GeoboardShapes.Tests\GeoboardShapes.Tests.csproj", "{D117E35F-B58A-4E6F-8184-B8146B5FB85D}"
-EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ProjectEuler", "ProjectEuler\ProjectEuler.pyproj", "{7DEC9A91-BA76-4467-AB2E-BE5EF0CFD8E9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumericalMethods", "NumericalMethods\NumericalMethods.csproj", "{DC930FAD-36F2-41C7-A2EC-EABFBC57AF72}"
