@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <Compile Include="AreaTests.fs" />
+    <Compile Include="MathMethodsTests.fs" />
+    <Compile Include="Problem514Tests.fs" />
   </ItemGroup>
 
   <ItemGroup>
